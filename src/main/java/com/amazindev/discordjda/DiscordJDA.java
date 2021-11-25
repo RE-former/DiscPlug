@@ -85,6 +85,9 @@ public final class DiscordJDA extends JavaPlugin implements CommandExecutor {
         jda.addEventListener(new PlayerListListener());
         jda.addEventListener(new PingListener());
 
+        // Enabling metrics
+        Metrics metrics = new Metrics(this, 13417);
+
         // Sending server start message to user
         for (String id : this.getConfig().getStringList("ids")) {
             DiscordFunctions.sendDM(id, ":white_check_mark: " + "**" + serverName + "**" + " has started!");
