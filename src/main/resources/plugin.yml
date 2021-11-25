@@ -1,0 +1,10 @@
+name: DiscordJDA
+version: '${project.version}'
+main: com.amazindev.discordjda.DiscordJDA
+api-version: 1.17
+authors: [ AmazinAmazon ]
+website: amazindev.com
+commands:
+  discordjdareload:
+    description: Reloads the configuration
+    usage: /<command>
