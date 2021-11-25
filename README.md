@@ -6,7 +6,7 @@ A discord controlled moderation plugin with several customisable features.
 - Different new player join message
 - Kill message
 - Anti swearing with message - bypass with `discordjda.chatbypass` permission
-- Notify admins on the server wih `discordjda.swearcheck` permussion
+- Notify admins on the server with `discordjda.swearcheck` permussion
 
 ### Screenshots:
 - Join message:
