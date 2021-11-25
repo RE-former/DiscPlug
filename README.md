@@ -1,2 +1,2 @@
 # DiscPlug
-A discord control/moderation plugin
+A discord controled/moderation plugin
