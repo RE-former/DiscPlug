@@ -33,11 +33,11 @@ public class ChatListener implements Listener {
                     if (e.getMessage().contains(word)) {
                         e.setCancelled(true);
                         p.sendMessage(ChatColor.RED + "You cannot say this word!");
-                        plugin.getLogger().info(ChatColor.RED + e.getPlayer().getName() + " tried to say the word " + word);
+                        plugin.getLogger().info(ChatColor.RED + e.getPlayer().getName() + " tried to say the word: " + word + ". In the context: " + e.getMessage());
 
                         EmbedBuilder embedSwear = new EmbedBuilder()
                                 .setTitle("User swore")
-                                .setDescription(p.getDisplayName() + " said `"  + word + "`")
+                                .setDescription(p.getName() + " tried to say `"  + word + "`. In the context: `" + e.getMessage() + "`")
                                 .setColor(Color.GRAY)
                                 .setFooter(serverName)
                                 .setTimestamp(Instant.now());
@@ -48,7 +48,7 @@ public class ChatListener implements Listener {
 
                         for (Player player : Bukkit.getServer().getOnlinePlayers()) {
                             if (player.hasPermission("discordjda.swearcheck")) {
-                                player.sendMessage(ChatColor.RED + e.getPlayer().getName() + " tried to say the word " + word);
+                                player.sendMessage(ChatColor.RED + e.getPlayer().getName() + " tried to say the word: " + word + ". In the context: " + e.getMessage());
                             }
                         }
 

@@ -30,17 +30,16 @@ public final class DiscordJDA extends JavaPlugin implements CommandExecutor {
         saveDefaultConfig();
 
         if (!getConfig().contains("token")) {
-            getConfig().set("token", "OTAxMzkxODY1Nzg0NDU5Mjg1.YXPMlw.pXjnhPz_myuCETqUbXyWKsiMAxg");
+            getConfig().set("token", "token_here");
         }
         if (!getConfig().contains("serverName")) {
-            getConfig().set("serverName", "Server Build");
+            getConfig().set("serverName", "Default");
         }
         if (!getConfig().contains("activity")) {
-            getConfig().set("activity", "mclsmi.lyceestendhal.it");
+            getConfig().set("activity", "minecraft");
         }
         if (!getConfig().contains("ids")) {
             ArrayList<String> ids = new ArrayList<>();
-            ids.add("561243464721891330");
             ids.add("561243464721891330");
             getConfig().set("ids", ids);
         }
